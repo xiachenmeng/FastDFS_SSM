@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.mapper.HouseInfoMapper">
+<insert id="saveHouseInfo" parameterType="com.qf.pojo.HouseInfo">
+    insert into  house_info(title,price,images,`desc`) value (#{title},#{price},#{images},#{desc})
+</insert>
+    <select id="findall" resultType="com.qf.pojo.HouseInfo">
+        select * from house_info
+    </select>
+</mapper>
